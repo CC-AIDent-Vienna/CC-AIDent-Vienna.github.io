@@ -4852,7 +4852,7 @@ a:focus-visible {
   .opportunities-section .text-link {
     grid-column: 2
   }
-  former-members-list {
+  .former-members-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
