@@ -4254,12 +4254,10 @@ img {
   padding-left: 2rem
 }
 .person-card img {
-  object-fit: contain;
-  object-position: center;
-  background: var(--paper);
+  object-fit: cover;
   border: 1px solid #111d4e1a;
   width: 96px;
-  height: 128px
+  height: 128px;
 }
 .person-card img[src$=christian-hauer\.png],.person-card img[src$=patrick-chitan\.png] {
   object-position: center 22%
