@@ -4301,6 +4301,50 @@ img {
   font-size: .76rem;
   line-height: 1.45
 }
+.former-members {
+  grid-template-columns: minmax(160px, .55fr) 1.45fr;
+  gap: clamp(2rem, 6vw, 6rem);
+  margin-top: 3rem;
+  display: grid;
+}
+
+.former-members h3 {
+  color: var(--navy);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: .68rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.former-members-list {
+  border-top: 1px solid var(--line);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.former-members-list li {
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: minmax(180px, .8fr) 1.2fr;
+  gap: 2rem;
+  padding: .9rem 0;
+  display: grid;
+}
+
+.former-member-name {
+  color: var(--navy);
+  font-size: .82rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.former-member-details {
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.55;
+}
 .profile-hero {
   border-bottom: 1px solid var(--line);
   background: var(--white)
@@ -4934,6 +4978,16 @@ a:focus-visible {
     min-height: auto;
     padding: 2.8rem 0
   }
+  .former-members {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.former-members-list li {
+  grid-template-columns: 1fr;
+  gap: .22rem;
+  padding: .85rem 0;
+}
 }
 @media (max-width:430px) {
   .header-inner {
