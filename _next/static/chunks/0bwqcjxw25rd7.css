@@ -4982,12 +4982,12 @@ a:focus-visible {
   grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 2.5rem;
-}
+  }
 .former-members-list li {
   grid-template-columns: 1fr;
   gap: .22rem;
   padding: .85rem 0;
-}
+  }
 }
 @media (max-width:430px) {
   .header-inner {
