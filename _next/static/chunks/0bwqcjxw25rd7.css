@@ -4317,7 +4317,7 @@ img {
 
 .former-members-list {
   border-top: 1px solid var(--line);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0;
   padding: 0;
   list-style: none;
@@ -4328,16 +4328,21 @@ img {
   border-bottom: 1px solid var(--line);
   flex-direction: column;
   justify-content: center;
-  padding: 1rem 2rem 1rem 0;
+  min-width: 0;
+  padding: 1rem 1.35rem;
   display: flex;
 }
 
-.former-members-list li:nth-child(odd) {
+.former-members-list li:not(:last-child) {
   border-right: 1px solid var(--line);
 }
 
-.former-members-list li:nth-child(even) {
-  padding-left: 2rem;
+.former-members-list li:first-child {
+  padding-left: 0;
+}
+
+.former-members-list li:last-child {
+  padding-right: 0;
 }
 
 .former-member-name {
@@ -4847,6 +4852,19 @@ a:focus-visible {
   .opportunities-section .text-link {
     grid-column: 2
   }
+  former-members-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .former-members-list li:nth-child(odd) {
+    border-right: 1px solid var(--line);
+    padding-left: 0;
+  }
+
+  .former-members-list li:nth-child(even) {
+    border-right: 0;
+    padding-right: 0;
+  }
 }
 @media (max-width:700px) {
   html {
@@ -4990,14 +5008,16 @@ a:focus-visible {
     margin-top: 2.5rem;
   }
 
-  .former-members-list {
-    grid-template-columns: 1fr;
+  .former-members-list li {
+    padding: .85rem .75rem;
   }
 
-  .former-members-list li,
+  .former-members-list li:nth-child(odd) {
+    padding-left: 0;
+  }
+
   .former-members-list li:nth-child(even) {
-    border-right: 0;
-    padding: .85rem 0;
+    padding-right: 0;
   }
 }
 @media (max-width:430px) {
