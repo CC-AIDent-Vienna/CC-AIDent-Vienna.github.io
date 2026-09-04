@@ -27,6 +27,7 @@ f:["$","$1","h",{"children":[null,["$","$L18",null,{"children":"$L19"}],["$","di
 12:["$","p",null,{"className":"person-role","children":"PhD Student"}]
 13:["$","p",null,{"className":"person-background","children":"Dentistry"}]
 14:["$","article","Christian Hauer",{"className":"person-card","children":[["$","img",null,{"src":"/team/christian-hauer.png","alt":"Portrait of Christian Hauer","width":"160","height":"160","loading":"lazy"}],["$","div",null,{"className":"person-copy","children":[["$","h3",null,{"children":"Christian Hauer"}],["$","p",null,{"className":"person-role","children":"MSc Student"}],["$","p",null,{"className":"person-background","children":"Biomedical Engineering"}]]}]]}]
+["$","article","Hannah Irfan",{"className":"person-card","children":[["$","img",null,{"src":"/team/hannah-irfan.webp","alt":"Portrait of Hannah Irfan","width":"160","height":"160","loading":"lazy"}],["$","div",null,{"className":"person-copy","children":[["$","h3",null,{"children":"Hannah Irfan"}],["$","p",null,{"className":"person-role","children":"Visiting Researcher"}],["$","p",null,{"className":"person-background","children":"Dentistry"}]]}]]}]
 19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 1c:I[27201,["/_next/static/chunks/0dbhjjzl8qfwv.js"],"IconMark"]
 17:null
