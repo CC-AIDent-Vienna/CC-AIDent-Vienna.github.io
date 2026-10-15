@@ -5329,3 +5329,118 @@ a:focus-visible {
     background-position: 0 0
   }
 }
+
+/* Open position card (homepage opportunities section) */
+.job-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  grid-template-columns: 1fr 18px;
+  gap: .35rem 1rem;
+  max-width: 690px;
+  margin-top: 1.4rem;
+  padding: 1.15rem 1.35rem;
+  transition: border-color .15s, background .15s;
+  display: grid
+}
+.job-card:hover { border-color: var(--accent) }
+.job-card:hover h3 { color: var(--accent) }
+.job-card-label {
+  color: var(--accent);
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  font-size: .65rem;
+  font-weight: 700;
+  line-height: 1.4
+}
+.job-card h3 {
+  color: var(--navy);
+  grid-column: 1;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color .15s
+}
+.job-card-meta { color: var(--muted); grid-column: 1; font-size: .8rem; line-height: 1.5 }
+.job-card-arrow { color: var(--accent); grid-area: 1/2/span 3; align-self: center; justify-self: end; font-size: 1rem }
+
+/* Job posting page */
+.job-facts {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 980px;
+  margin: 2.6rem 0 0;
+  padding: 1.6rem 0 0;
+  border-top: 1px solid var(--line);
+  display: grid
+}
+.job-facts dt {
+  color: var(--accent);
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  margin: 0 0 .45rem;
+  font-size: .62rem;
+  font-weight: 700;
+  line-height: 1.4
+}
+.job-facts dd { color: var(--navy); margin: 0; font-size: .88rem; font-weight: 600; line-height: 1.5 }
+.job-apply-button {
+  background: var(--navy);
+  color: var(--white);
+  align-items: center;
+  gap: .65rem;
+  min-height: 44px;
+  margin-top: 2.2rem;
+  padding: .8rem 1.4rem;
+  font-size: .8rem;
+  font-weight: 700;
+  transition: background .15s;
+  display: inline-flex
+}
+.job-apply-button:hover { background: var(--accent) }
+.job-section {
+  width: min(calc(100% - 3rem), var(--max-width));
+  border-bottom: 1px solid var(--line);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 6vw, 5rem) 0;
+  display: block
+}
+.job-section:last-of-type { border-bottom: 0 }
+.job-content { max-width: 760px }
+.job-content h2 {
+  color: var(--navy);
+  letter-spacing: -.038em;
+  margin: 0 0 1.4rem;
+  font-size: clamp(1.55rem, 2.8vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.15
+}
+.job-content h3 { color: var(--navy); margin: 2rem 0 .8rem; font-size: .94rem; font-weight: 600; line-height: 1.4 }
+.job-content p, .job-content li { color: var(--ink); font-size: .92rem; line-height: 1.75 }
+.job-content p { margin: 0 0 1rem }
+.job-content ul { border-top: 1px solid var(--line); margin: 0 0 1rem; padding: 0; list-style: none }
+.job-content li { border-bottom: 1px solid var(--line); padding: .75rem 0 .75rem 1.4rem; position: relative }
+.job-content li:before { content: ""; background: var(--accent); width: 6px; height: 6px; position: absolute; top: 1.42rem; left: 0 }
+.job-content a:not(.job-apply-button) { color: var(--accent); border-bottom: 1px solid currentColor }
+.job-figure { margin: 2rem 0 0 }
+.job-figure img { border: 1px solid var(--line); background: var(--white); width: 100%; height: auto; display: block }
+.job-figure figcaption { color: var(--muted); margin-top: .7rem; font-size: .78rem; line-height: 1.5 }
+.job-subtitle { color: var(--muted); margin: 1.4rem 0 0; font-size: .96rem; line-height: 1.72 }
+.job-note { color: var(--muted) !important; font-size: .82rem !important }
+
+@media (max-width: 1020px) {
+  .job-facts { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
+@media (max-width: 700px) {
+  .job-section { width: min(calc(100% - 2rem), var(--max-width)); padding: 3rem 0 }
+  .job-facts { grid-template-columns: 1fr; gap: 1.1rem }
+  .job-card { padding: 1rem 1.1rem }
+}
+
+/* Opportunities: two columns on desktop, card uses the full content width */
+.opportunities-section .job-card { max-width: none }
+@media (min-width: 701px) {
+  .opportunities-section { grid-template-columns: .45fr 1.55fr; row-gap: 1.2rem }
+  .opportunities-section .text-link { grid-column: 2; justify-self: start }
+}
