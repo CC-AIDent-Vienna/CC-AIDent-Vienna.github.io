@@ -5402,11 +5402,9 @@ a:focus-visible {
 .job-section {
   width: min(calc(100% - 3rem), var(--max-width));
   border-bottom: 1px solid var(--line);
-  grid-template-columns: .55fr 2fr;
-  gap: clamp(2rem, 7vw, 7rem);
   margin: 0 auto;
   padding: clamp(3.5rem, 6vw, 5rem) 0;
-  display: grid
+  display: block
 }
 .job-section:last-of-type { border-bottom: 0 }
 .job-content { max-width: 760px }
@@ -5435,7 +5433,14 @@ a:focus-visible {
   .job-facts { grid-template-columns: repeat(2, minmax(0, 1fr)) }
 }
 @media (max-width: 700px) {
-  .job-section { width: min(calc(100% - 2rem), var(--max-width)); grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 0 }
+  .job-section { width: min(calc(100% - 2rem), var(--max-width)); padding: 3rem 0 }
   .job-facts { grid-template-columns: 1fr; gap: 1.1rem }
   .job-card { padding: 1rem 1.1rem }
+}
+
+/* Opportunities: two columns on desktop, card uses the full content width */
+.opportunities-section .job-card { max-width: none }
+@media (min-width: 701px) {
+  .opportunities-section { grid-template-columns: .45fr 1.55fr; row-gap: 1.2rem }
+  .opportunities-section .text-link { grid-column: 2; justify-self: start }
 }
